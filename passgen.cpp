@@ -35,7 +35,6 @@ std::string generate_password(int length) {
                 password += charset[csprng_get_int(csprng) % charset.size()];
             }
 
-            // Check if requirements are met
             requirements_met = 
                 password.find_first_of(LETTERS) != std::string::npos &&
                 password.find_first_of(DIGITS) != std::string::npos &&
